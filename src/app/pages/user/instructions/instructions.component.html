@@ -1,0 +1,69 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card class="mt10">
+                    <mat-card-header>
+                        <mat-card-title >
+                            Read following Instructions..
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content class="ml20">
+                        <h2>{{quiz.title}}</h2>
+                        <p>{{quiz.description}}</p>
+
+                        <mat-divider></mat-divider>
+
+                        <h2>Important Instructions</h2>
+
+                        <ul>
+                            <li>Quiz is for for practice</li>
+                            <li>Quiz is for for practice</li>
+                            <li>Quiz is for for practice</li>
+                            <li>All question are Multiple Choice questions.</li>
+                            <li>You have to Submit quiz within <b>{{quiz.numberOfQuestions*2}} minutes. </b></li>
+                            <li>Attemps will be 3 times.</li>
+                            <li> There are <b>{{quiz.numberOfQuestions}}</b> questions in this quiz.</li>
+
+                            <li>Each question carries <b>{{ quiz.maxMarks/quiz.numberOfQuestions}}</b> marks</li>
+                            <li>No negative Marking</li>
+                        </ul>
+                        <br />
+                        <ul>
+                        <li>The quizzes consists of questions carefully designed to help you self-assess your
+                            comprehension of the information presented on the topics covered in the module.</li>
+                        <li> No data will be collected on the website regarding your responses or how many times you take the quiz.
+                        </li>
+
+                        <li>Each question in the quiz is of multiple-choice or true or false  format. Read each
+                        question carefully, and click on the button next to your response that is based on the
+                        information covered on the topic in the module. 
+                        </li>
+                        <li>
+                        Each correct or incorrect response will
+                        result in appropriate feedback immediately at the bottom of the screen.</li>
+                            <li>
+                        After responding to a question, click on the "Next Question" button at the bottom to go to
+                        the next questino. After responding to the 8th question, click on "Close" on the top of the
+                        window to exit the quiz.
+
+                        If you select an incorrect response for a question, you can try again until you get the
+                        correct response. If you retake the quiz, the questions and their respective responses will
+                        be randomized.
+
+                        The total score for the quiz is based on your responses to all questions. If you respond
+                        incorrectly to a question or retake a question again and get the correct response, your quiz
+                        score will reflect it appropriately. However, your quiz will not be graded, if you skip a
+                        question or exit before responding to all the questions.</li>
+                        </ul>
+                    </mat-card-content>
+                    <mat-card-actions class="text-center">
+                        <button 
+                        (click)="startQuiz()"
+                        mat-raised-button color="accent">Start Quiz</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

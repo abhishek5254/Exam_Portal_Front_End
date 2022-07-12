@@ -1,0 +1,39 @@
+<!--<h1>Navbar</h1>  -->
+<mat-toolbar color="primary">
+  <a *ngIf="!isLoggedIn" routerLink="/" mat-icon-button class="example-icon"
+    aria-label="Example icon-button with menu icon">
+    <mat-icon>menu_book</mat-icon>
+  </a>
+  <span>Pariksha</span>
+  <span class="example-spacer"></span>
+  <a *ngIf="!isLoggedIn" [routerLink]="'/login'" mat-icon-button class="example-icon favorngite-icon"
+    aria-label="Example icon-button with heart icon">
+    Login
+  </a>
+  <a *ngIf="!isLoggedIn" [routerLink]="'/signup'" mat-icon-button class="example-icon favorite-icon ml20 mr20"
+    aria-label="Example icon-button with heart icon">
+    Register
+  </a>
+
+
+
+
+
+  <button *ngIf="isLoggedIn && user" mat-icon-button class="example-icon favorite-icon ml20 mr20"
+    aria-label="Example icon-button with heart icon" routerLink="/admin/profile">
+
+    <!-- {{ login.getUser().username }} -->
+    {{user.username}}
+  </button>
+
+
+
+  <a (click)="logout()" *ngIf="isLoggedIn" mat-icon-button class="example-icon favorite-icon ml20 mr20"
+    aria-label="Example icon-button with heart icon">
+    Logout
+  </a>
+
+  <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>register</mat-icon>
+    </button> -->
+</mat-toolbar>

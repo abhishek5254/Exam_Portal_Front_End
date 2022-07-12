@@ -1,0 +1,51 @@
+<mat-card *ngIf="user">
+    <div >
+        <h2 class="text-center"> Your Profile Details </h2>
+     </div>
+    <!-- {{user | json}} -->
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    <img src="http://naikenviro.net/wp-content/uploads/2018/06/null-300x300.jpg"
+                    class="profile-image"
+                    alt="...source error"/>
+                    <h2 class="mt20">{{user.firstName}} {{user.lastName}}</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-10 offset-md-1">
+
+                        <table class="table">
+                            <tr>
+                                <td>Username</td>
+                                <td>{{user.username}}</td>
+                            </tr>
+                            <tr>
+                                <td>User Id</td>
+                                <td>Exam{{user.id}}</td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td>{{user.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>{{user.authorities[0].authority}}</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>{{user.enabled?"ACTIVE":"NOT ACTIVE"}}</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    
+    <mat-card-actions  class="text-center">
+        <button mat-raised-button color="primary">Update</button>
+      </mat-card-actions>
+  
+</mat-card>
